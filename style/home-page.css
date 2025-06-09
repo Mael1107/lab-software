@@ -4,7 +4,44 @@
     padding: 0px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 header {
     background-color: black;
+    height: 5vw;
+}
+
+#phone {
+    position: absolute;
+    margin: auto;
+    top: 3.5%;
+    left: 73%;
+}
+
+#pcall {
+    position: absolute;
+    margin: auto;
+    top: 3%;
+    left: 75%;
+}
+
+#person {
+    position: absolute;
+    margin: auto;
+    top: 3.5%;
+    left: 83%;
+    display: block;
+    color: white;
+}
+
+#pperson {
+    position: absolute;
+    margin: auto;
+    top: 3%;
+    left: 85%;
+    color: white;
+}
+
+body, html {
+    background-color: #D9D9D9;
 }
