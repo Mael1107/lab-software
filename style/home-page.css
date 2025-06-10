@@ -6,6 +6,11 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
+
+body, html {
+    background-color: #D9D9D9;
+}
+
 header {
     background-color: black;
     height: 5vw;
@@ -18,11 +23,12 @@ header {
     left: 73%;
 }
 
-#pcall {
+#paragrafo-call {
     position: absolute;
     margin: auto;
     top: 3%;
     left: 75%;
+    font-size: 0.9em;
 }
 
 #person {
@@ -30,18 +36,54 @@ header {
     margin: auto;
     top: 3.5%;
     left: 83%;
-    display: block;
     color: white;
 }
 
-#pperson {
+#paragrafo-person {
     position: absolute;
     margin: auto;
     top: 3%;
     left: 85%;
     color: white;
+    font-size: 0.9em;
 }
 
-body, html {
-    background-color: #D9D9D9;
+
+#cart {
+    position: absolute;
+    margin: auto;
+    top: 3.5%;
+    left: 96%;
+}
+
+#img1 {
+    position: absolute;
+    top: 28%;
+    left: 22.5%;
+    background-color: #D4D1C9;
+    width: 250px;
+    height: 250px;
+}
+
+#img2 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    background-color: #D4D1C9;
+    width: 250px;
+    height: 380px;
+
+}
+
+#img3 {
+    position: absolute;
+    top: 28%;
+    left: 57.5%;
+    background-color: #D4D1C9;
+    width: 250px;
+    height: 250px;
+}
+
+#carrossel {
+    
 }
