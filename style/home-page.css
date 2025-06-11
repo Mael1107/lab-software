@@ -4,7 +4,7 @@
     padding: 0px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: red;
 }
 
 body, html {
@@ -13,59 +13,7 @@ body, html {
     height: 100vh;
 }
 
-main {
-    background-color: #D9D9D9;
-    margin: auto;
-}
-
-main section p {
-    color: black;
-}
-
 header {
+    height: 15vw;
     background-color: black;
-    height: 8%;
-}
-
-#cart {
-    position: absolute;
-    top: 3%;
-    left: 92%;
-}
-
-#paragrafo-call {   
-    display: none;
-}
-
-#paragrafo-person {
-    display: none;
-}
-
-#paragrafo-person-cell {
-    position: absolute;
-    top: 3%;
-    left: 79%;
-    font-size: 0.8em;
-}
-
-#paragrafo-person-cell a {
-    text-decoration: none;
-}
-
-#phone   {
-    display: none;
-}
-
-#person {
-    position: absolute;
-    top: 2.5%;
-    left: 73%;
-}
-
-#search {
-    position: absolute;
-    top: 3%;
-    left: 20%;
-    border-radius: 20px;
-    padding: 5px 5px 5px 10px;
 }
