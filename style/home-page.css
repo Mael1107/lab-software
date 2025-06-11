@@ -11,9 +11,78 @@ body, html {
     background-color: white;
     width: 100vw;
     height: 100vh;
+    background-color: white;
 }
 
 header {
     height: 15vw;
     background-color: black;
 }
+
+#logo img {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    width: 35px;
+}
+
+#caixa-de-busca {
+    position: absolute;
+    top: 3%;
+    left: 24%;
+}
+
+#caixa-de-busca input{
+    width: 200px;
+    padding: 5px 5px 5px 10px;
+    border: none;
+    border-radius: 30px;
+}
+
+#atendimento {
+    display: none;
+}
+
+#logar span{ 
+    position: absolute;
+    top: 3%;
+    left: 80%;
+}
+
+#logar p {
+    display: none;
+}
+
+#carrinho{ 
+    position: absolute;
+    top: 3%;
+    left: 90%;
+}
+
+main {
+    position: relative;
+    background-color: #d9d9d9;
+    height: 90%;
+    width: 100%;
+}
+
+#img1 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #D5CFC7;
+    height: 250px;
+    width: 150px;
+}
+
+#img2 {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    background-color: #D5CFC7;
+    height: 150px;
+    width: 150px;
+}
+
