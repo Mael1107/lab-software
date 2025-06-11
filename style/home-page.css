@@ -113,7 +113,7 @@ main {
     left: 84%;
     transform: translate(-50%,-50%);
     background-color: #D5CFC7;
-    height: 140px;
+    height: 160px;
     width: 140px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.334);
     box-sizing: border-box;
@@ -121,7 +121,7 @@ main {
 
 footer {
     width: 90vw;
-    
+
 }
 
 footer p {
