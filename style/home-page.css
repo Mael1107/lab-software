@@ -79,10 +79,20 @@ main {
 #img2 {
     position: absolute;
     top: 25%;
-    left: 20%;
+    left: 18%;
     transform: translate(-50%,-50%);
     background-color: #D5CFC7;
-    height: 150px;
+    height: 180px;
+    width: 150px;
+}
+
+#img3 {
+    position: absolute;
+    top: 25%;
+    left: 82%;
+    transform: translate(-50%,-50%);
+    background-color: #D5CFC7;
+    height: 180px;
     width: 150px;
 }
 
