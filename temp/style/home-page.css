@@ -121,7 +121,12 @@ article#left {
 
 article#below{ 
     background-color: #d6d2ca;
-    height: 300px;
+    height: 500px;
+}
+
+footer {
+    background-color: black;
+    height: 25vh;
 }
 
 
