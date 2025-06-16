@@ -14,11 +14,11 @@ class ApplicationController < ActionController::API
     end
   end
 
-  # def verify_superuser_request
-  #   if authenticate_request && @current_user.is_super
-  #     return true
-  #   else
-  #     return false
-  #   end
-  # end
+  def verify_superuser_request
+    if authenticate_request && @current_user.is_super
+      return true
+    else
+      return false
+    end
+  end
 end
