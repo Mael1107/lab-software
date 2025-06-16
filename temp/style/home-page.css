@@ -86,16 +86,19 @@ body {
 
 main {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    width: 99vw;
-    height: 99vh;
+    height: 100vh;
 }
+
 article#middle {
     background-color: #d6d2ca;
     width: 200px;
     height: 300px;
 }
+
+
 
 
 
