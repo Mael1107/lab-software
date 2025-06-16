@@ -5,5 +5,4 @@ class User < ApplicationRecord
   validates :email, presence:true
   validates :password, presence:true
   validates :cpf, presence:true
-  validates :is_super, presence:true
 end

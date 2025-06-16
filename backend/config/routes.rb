@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   post "user/register", to: "users#create"
   post "user/login", to: "users#login"
-  post "user/delete/:id", to: "users#destroy"
+  post "user/update", to: "users#update"
+  post "user/delete", to: "users#destroy"
 
   post "product/register", to: "products#create"
 end
