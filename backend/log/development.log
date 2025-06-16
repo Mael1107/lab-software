@@ -500,3 +500,197 @@ Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 22.7ms (1 query, 0 cached
 
 
   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-16 14:14:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "UserTest", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922085", "is_super" => false}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+Completed 422 Unprocessable Content in 273ms (ActiveRecord: 24.7ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Is super can't be blank):
+  
+app/controllers/users_controller.rb:5:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-16 14:14:24 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "UserTest", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922085", "is_super" => false}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+Completed 422 Unprocessable Content in 229ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Is super can't be blank):
+  
+app/controllers/users_controller.rb:5:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-16 14:15:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "UserTest", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922085", "is_super" => false}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#create'
+  [1m[36mUser Create (3.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "cpf", "number", "is_super", "created_at", "updated_at") VALUES ('UserTest', '$2a$12$XM80nsHYJCfV8g4VhExI.enyyVqzsfTHCxmDumeZ0yIsTjBrhbYp2', 'teste@gmail.com', '40028922085', NULL, FALSE, '2025-06-16 17:15:05.089738', '2025-06-16 17:15:05.089738') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#create'
+Completed 200 OK in 266ms (Views: 0.2ms | ActiveRecord: 17.5ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/login" for ::1 at 2025-06-16 14:15:56 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "UserTest", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'UserTest' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:13:in 'UsersController#login'
+Completed 200 OK in 242ms (Views: 0.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started POST "/user/update" for ::1 at 2025-06-16 14:17:03 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+Completed 400 Bad Request in 12ms (ActiveRecord: 5.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:35:in 'UsersController#user_params'
+app/controllers/users_controller.rb:28:in 'UsersController#update'
+Started POST "/user/update" for ::1 at 2025-06-16 14:17:13 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {"name" => "UserTest", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922085", "is_super" => false}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = '$2a$12$KgvUEOw/4NOoLhxSq9z5QuVEq.5lP.ag3Q1I48gAYiX4r04zVEfsu', "updated_at" = '2025-06-16 17:17:13.912001' WHERE "users"."id" = 2 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+Completed 200 OK in 232ms (Views: 0.1ms | ActiveRecord: 3.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/update" for ::1 at 2025-06-16 14:17:33 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {"name" => "UserTeste", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922085", "is_super" => false}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "name" = 'UserTeste', "password_digest" = '$2a$12$SD357BZXGBnEptzQa2Ey9.3Vpw8wTrr/ffl0gJiF90T6ftnQKcFPi', "updated_at" = '2025-06-16 17:17:34.078320' WHERE "users"."id" = 2 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+Completed 200 OK in 240ms (Views: 0.2ms | ActiveRecord: 4.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/update" for ::1 at 2025-06-16 14:17:54 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {"name" => "UserTest"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user/update" for ::1 at 2025-06-16 14:18:07 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {"name" => "UserTest"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+Completed 204 No Content in 4ms (ActiveRecord: 1.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user/update" for ::1 at 2025-06-16 14:18:22 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {"name" => "UserTest", "email" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user/update" for ::1 at 2025-06-16 14:18:50 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"user" => {"name" => "UserTest", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922085", "is_super" => false}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+  [1m[36mUser Update (3.1ms)[0m  [1m[33mUPDATE "users" SET "name" = 'UserTest', "password_digest" = '$2a$12$dCeXNe8BiOtToLm7Ql2iCeRvfbbula6mIq9HnznbYIJu4D3YB6982', "updated_at" = '2025-06-16 17:18:50.689913' WHERE "users"."id" = 2 /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT /*action='update',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:28:in 'UsersController#update'
+Completed 200 OK in 232ms (Views: 0.1ms | ActiveRecord: 5.0ms (2 queries, 0 cached) | GC: 0.9ms)
+
+
+Started POST "/user/delete" for ::1 at 2025-06-16 14:19:38 -0300
+Processing by UsersController#destroy as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:24:in 'UsersController#destroy'
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = 2 /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:24:in 'UsersController#destroy'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:24:in 'UsersController#destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 4.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/register" for ::1 at 2025-06-16 14:22:35 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "UserTeste", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "40028922069", "is_super" => false}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#create'
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "cpf", "number", "is_super", "created_at", "updated_at") VALUES ('UserTeste', '$2a$12$OAnqYbOV2wCVNtRzL49tw.5jN4K0PFXs7eiUS9Ku8eLbhwkbWNOEO', 'EmailUsuarioTeste@gmail.com', '40028922069', NULL, FALSE, '2025-06-16 17:22:35.771894', '2025-06-16 17:22:35.771894') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#create'
+Completed 200 OK in 249ms (Views: 0.3ms | ActiveRecord: 10.1ms (1 query, 0 cached) | GC: 7.7ms)
+
+
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/login" for ::1 at 2025-06-16 14:25:42 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "UserTeste", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'UserTeste' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:13:in 'UsersController#login'
+Completed 401 Unauthorized in 231ms (Views: 0.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 2.3ms)
+
+
+Started POST "/user/login" for ::1 at 2025-06-16 14:26:07 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "UserTeste", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'UserTeste' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:13:in 'UsersController#login'
+Completed 200 OK in 226ms (Views: 0.2ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.7ms)
+
+
+Started POST "/user/destroy" for ::1 at 2025-06-16 14:27:37 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/user/destroy"):
+  
+Started POST "/user/delete" for ::1 at 2025-06-16 14:27:59 -0300
+Processing by UsersController#destroy as HTML
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/delete" for ::1 at 2025-06-16 14:28:35 -0300
+Processing by UsersController#destroy as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:24:in 'UsersController#destroy'
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = 3 /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:24:in 'UsersController#destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT /*action='destroy',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:24:in 'UsersController#destroy'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.1ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
