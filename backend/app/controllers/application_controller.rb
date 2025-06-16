@@ -13,4 +13,12 @@ class ApplicationController < ActionController::API
       render json: { error: e.message }, status: :unauthorized
     end
   end
+
+  # def verify_superuser_request
+  #   if authenticate_request && @current_user.is_super
+  #     return true
+  #   else
+  #     return false
+  #   end
+  # end
 end

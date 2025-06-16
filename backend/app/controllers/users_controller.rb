@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :authenticate_request, only: [ :login, :create ]
+  # before_action :verify_superuser_request, only: [ :destroy ]
 
   def create
     if User.create!(user_params)
@@ -20,6 +21,24 @@ class UsersController < ApplicationController
     end 
   end
 
+  def destroy
+    user = User.find(id: user_params[:id])
+
+
+  end
+
+
+  # def destroy
+  #   user = User.find(id: user_params[:id])
+
+  #   if @current_user.name == user.name
+  #     user.destroy
+  #   elsif @current_user.is_super
+  #     user.destroy
+  #   else
+  #     render json: { error: "Can't proceed with this action" }
+  #   end
+  # end
 
 
   private
