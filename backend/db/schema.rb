@@ -10,19 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_15_235525) do
+ActiveRecord::Schema[8.0].define(version: 2025_06_16_015139) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  create_table "accounts", force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
+    t.string "image"
     t.string "name"
-    t.string "email"
-    t.string "cpf"
-    t.string "number"
-    t.boolean "is_super"
+    t.float "price"
+    t.string "description"
+    t.string "sizes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
 
   create_table "users", force: :cascade do |t|
