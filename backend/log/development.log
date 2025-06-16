@@ -1,5 +1,502 @@
-  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Backend'*/[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Backend'*/[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-06-12 01:26:10.318055', '2025-06-12 01:26:10.318058') RETURNING "key" /*application='Backend'*/[0m
-  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+Migrating to CreateUsers (20250615235525)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[35m (32.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "password_digest" character varying, "email" character varying, "cpf" character varying, "number" character varying, "is_super" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250615235525') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+Migrating to DropTableAccounts (20250615235943)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250615235943') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+Migrating to RemoveAccountsTable (20250616000133)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "accounts" /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250616000133') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Started GET "/new" for ::1 at 2025-06-15 21:24:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+Started GET "/register" for ::1 at 2025-06-15 21:24:12 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/register"):
+  
+Started POST "/register" for ::1 at 2025-06-15 21:24:28 -0300
+Processing by UsersController#create as HTML
+Completed 400 Bad Request in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:17:in 'UsersController#user_params'
+app/controllers/users_controller.rb:6:in 'UsersController#create'
+Started POST "/register?name=devScratch" for ::1 at 2025-06-15 21:24:50 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:17:in 'UsersController#user_params'
+app/controllers/users_controller.rb:6:in 'UsersController#create'
+Started POST "/new?name=devScratch" for ::1 at 2025-06-15 21:25:02 -0300
+Processing by UsersController#new as HTML
+  Parameters: {"name" => "devScratch"}
+Completed 204 No Content in 16ms (ActiveRecord: 6.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/new?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:26:02 -0300
+Processing by UsersController#new as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/register?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:26:11 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:17:in 'UsersController#user_params'
+app/controllers/users_controller.rb:6:in 'UsersController#create'
+Started POST "/register?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:32:53 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+  
+NameError (undefined local variable or method 'user_params' for an instance of UsersController):
+  
+app/controllers/users_controller.rb:6:in 'UsersController#create'
+Started POST "/register?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:39:00 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 2.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+Started POST "/register?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:40:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 6.0ms (0 queries, 0 cached) | GC: 8.3ms)
+
+
+Started POST "/new?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:40:27 -0300
+Processing by UsersController#new as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user/register?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=13179716739" for ::1 at 2025-06-15 21:41:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "13179716739"}
+Completed 200 OK in 33ms (Views: 0.1ms | ActiveRecord: 8.2ms (0 queries, 0 cached) | GC: 4.5ms)
+
+
+Started POST "/user/register?name=devScratch&password_digest=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 21:51:15 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password_digest" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+Completed 422 Unprocessable Content in 31ms (ActiveRecord: 6.1ms (0 queries, 0 cached) | GC: 4.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Name can't be blank, Email can't be blank, Password digest can't be blank, Cpf can't be blank, Is super can't be blank):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:01:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+Completed 400 Bad Request in 17ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:13:in 'UsersController#user_params'
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:07:44 -0300
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "user"{
+    "name": "devScratch",
+    "password": "1969",
+    "email": "gabrielvsilva29022008@gmail.com",
+    "cpf": "14179716739",
+    "is_super":true
+  }
+}
+Processing by UsersController#create as HTML
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters)
+Caused by: JSON::ParserError (expected ':' after object key at line 1 column 9)
+
+Information for: ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:13:in 'UsersController#user_params'
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+
+Information for cause: JSON::ParserError (expected ':' after object key at line 1 column 9):
+  
+app/controllers/users_controller.rb:13:in 'UsersController#user_params'
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:07:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "user"{
+    "name": "devScratch",
+    "password": "1969",
+    "email": "gabrielvsilva29022008@gmail.com",
+    "cpf": "14179716739",
+    "is_super":true
+  }
+}
+Processing by UsersController#create as HTML
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters)
+Caused by: JSON::ParserError (expected ':' after object key at line 1 column 9)
+
+Information for: ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/users_controller.rb:13:in 'UsersController#user_params'
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+
+Information for cause: JSON::ParserError (expected ':' after object key at line 1 column 9):
+  
+app/controllers/users_controller.rb:13:in 'UsersController#user_params'
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:08:05 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "14179716739", "is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+[31mUnpermitted parameters: :name, :password, :email, :cpf, :is_super. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007391a1f94c40>, params: {"user" => {"name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "14179716739", "is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739", "controller" => "users", "action" => "create"} }[0m
+Completed 422 Unprocessable Content in 22ms (ActiveRecord: 6.4ms (0 queries, 0 cached) | GC: 3.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Name can't be blank, Email can't be blank, Password digest can't be blank, Cpf can't be blank, Is super can't be blank):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:08:30 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"Name" => "devScratch", "Password" => "[FILTERED]", "Email" => "[FILTERED]", "Cpf" => "14179716739", "Is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+[31mUnpermitted parameters: :Name, :Password, :Email, :Cpf, :Is_super. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x00007391a2055968>, params: {"user" => {"Name" => "devScratch", "Password" => "[FILTERED]", "Email" => "[FILTERED]", "Cpf" => "14179716739", "Is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739", "controller" => "users", "action" => "create"} }[0m
+Completed 422 Unprocessable Content in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Name can't be blank, Email can't be blank, Password digest can't be blank, Cpf can't be blank, Is super can't be blank):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:09:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"Name" => "devScratch", "Password" => "[FILTERED]", "Email" => "[FILTERED]", "Cpf" => "14179716739", "Is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+[31mUnpermitted parameters: :Name, :Password, :Email, :Cpf, :Is_super. Context: { controller: UsersController, action: create, request: #<ActionDispatch::Request:0x000077c51bec8c10>, params: {"user" => {"Name" => "devScratch", "Password" => "[FILTERED]", "Email" => "[FILTERED]", "Cpf" => "14179716739", "Is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739", "controller" => "users", "action" => "create"} }[0m
+Completed 422 Unprocessable Content in 25ms (ActiveRecord: 6.5ms (0 queries, 0 cached) | GC: 3.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Password can't be blank, Name can't be blank, Email can't be blank, Password digest can't be blank, Cpf can't be blank, Is super can't be blank):
+  
+app/controllers/users_controller.rb:4:in 'UsersController#create'
+Started POST "/user/register?name=devScratch&password=[FILTERED]&email=[FILTERED]&is_super=true&cpf=14179716739" for ::1 at 2025-06-15 22:10:25 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "cpf" => "14179716739", "is_super" => true}, "name" => "devScratch", "password" => "[FILTERED]", "email" => "[FILTERED]", "is_super" => "true", "cpf" => "14179716739"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "email", "cpf", "number", "is_super", "created_at", "updated_at") VALUES ('devScratch', '$2a$12$1ovSNn0PEL0cKnA0l6A/regmmn.8O/eBFv0vxprsU2s.MS6AUftfu', 'gabrielvsilva29022008@gmail.com', '14179716739', NULL, TRUE, '2025-06-16 01:10:25.617387', '2025-06-16 01:10:25.617387') RETURNING "id" /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*action='create',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:4:in 'UsersController#create'
+Completed 200 OK in 224ms (Views: 0.2ms | ActiveRecord: 10.1ms (1 query, 0 cached) | GC: 1.4ms)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+Started POST "/user/login" for ::1 at 2025-06-15 22:37:23 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'UsersController#login'
+Completed 401 Unauthorized in 19ms (Views: 0.2ms | ActiveRecord: 6.5ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started POST "/user/login" for ::1 at 2025-06-15 22:38:16 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'devScratch' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'UsersController#login'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 3.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'authenticate' for nil):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#login'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
+Started POST "/user/login" for ::1 at 2025-06-15 22:39:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'devScratch' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'UsersController#login'
+Completed 200 OK in 221ms (Views: 0.2ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started POST "/user/login" for ::1 at 2025-06-15 22:39:25 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'devScratch' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'UsersController#login'
+Completed 401 Unauthorized in 199ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user/login" for ::1 at 2025-06-15 22:39:29 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'devScratch' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'UsersController#login'
+Completed 200 OK in 199ms (Views: 0.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Backend'*/[0m
+Migrating to CreateProducts (20250616015139)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN /*application='Backend'*/[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "image" character varying, "name" character varying, "price" float, "description" character varying, "sizes" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250616015139') RETURNING "version" /*application='Backend'*/[0m
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT /*application='Backend'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205) /*application='Backend'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Started POST "/product/register" for ::1 at 2025-06-15 22:54:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+Zeitwerk::NameError (expected file /home/gabriel/Documentos/lab-software/backend/app/controllers/products_controller.rb to define constant ProductsController, but didn't):
+  
+zeitwerk (2.7.3) lib/zeitwerk/loader/callbacks.rb:31:in 'Zeitwerk::Loader::Callbacks#on_file_autoloaded'
+zeitwerk (2.7.3) lib/zeitwerk/core_ext/kernel.rb:27:in 'Kernel#require'
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in 'Module#const_get'
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in 'ActiveSupport::Inflector#constantize'
+activesupport (8.0.2) lib/active_support/core_ext/string/inflections.rb:74:in 'String#constantize'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:99:in 'ActionDispatch::Request#controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/request/utils.rb:108:in 'ActionDispatch::Request::Utils::CustomParamEncoder.action_encoding_template'
+actionpack (8.0.2) lib/action_dispatch/request/utils.rb:102:in 'ActionDispatch::Request::Utils::CustomParamEncoder.encode'
+actionpack (8.0.2) lib/action_dispatch/request/utils.rb:47:in 'ActionDispatch::Request::Utils.set_binary_encoding'
+actionpack (8.0.2) lib/action_dispatch/http/parameters.rb:70:in 'ActionDispatch::Http::Parameters#path_parameters='
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:50:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:43:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in 'Rack::Cors#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/product/register" for ::1 at 2025-06-15 22:55:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+  
+Zeitwerk::NameError (expected file /home/gabriel/Documentos/lab-software/backend/app/controllers/products_controller.rb to define constant ProductsController, but didn't):
+  
+zeitwerk (2.7.3) lib/zeitwerk/loader/callbacks.rb:31:in 'Zeitwerk::Loader::Callbacks#on_file_autoloaded'
+zeitwerk (2.7.3) lib/zeitwerk/core_ext/kernel.rb:27:in 'Kernel#require'
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in 'Module#const_get'
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in 'ActiveSupport::Inflector#constantize'
+activesupport (8.0.2) lib/active_support/core_ext/string/inflections.rb:74:in 'String#constantize'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:99:in 'ActionDispatch::Request#controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/request/utils.rb:108:in 'ActionDispatch::Request::Utils::CustomParamEncoder.action_encoding_template'
+actionpack (8.0.2) lib/action_dispatch/request/utils.rb:102:in 'ActionDispatch::Request::Utils::CustomParamEncoder.encode'
+actionpack (8.0.2) lib/action_dispatch/request/utils.rb:47:in 'ActionDispatch::Request::Utils.set_binary_encoding'
+actionpack (8.0.2) lib/action_dispatch/http/parameters.rb:70:in 'ActionDispatch::Http::Parameters#path_parameters='
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:50:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.16) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.16) lib/rack/conditional_get.rb:43:in 'Rack::ConditionalGet#call'
+rack (3.1.16) lib/rack/head.rb:15:in 'Rack::Head#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.16) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.16) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in 'Rack::Cors#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/product/register" for ::1 at 2025-06-15 23:04:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by ProductsController#create as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+  
+NoMethodError (undefined method 'decoded' for module JWT):
+  
+app/controllers/application_controller.rb:10:in 'ApplicationController#authenticate_request'
+Started POST "/product/register" for ::1 at 2025-06-15 23:05:39 -0300
+Processing by ProductsController#create as HTML
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/product/register?Authentication=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8" for ::1 at 2025-06-15 23:06:00 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"Authentication" => "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/product/register?Authentication=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8" for ::1 at 2025-06-15 23:06:00 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"Authentication" => "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started POST "/product/register?Authentication=%22eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8%22" for ::1 at 2025-06-15 23:06:06 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"Authentication" => "\"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8\""}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/product/register?Authentication=Bearer+eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8" for ::1 at 2025-06-15 23:06:12 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"Authentication" => "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user/login" for ::1 at 2025-06-15 23:06:32 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"user" => {"name" => "devScratch", "password" => "[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = 'devScratch' LIMIT 1 /*action='login',application='Backend',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:13:in 'UsersController#login'
+Completed 200 OK in 217ms (Views: 0.1ms | ActiveRecord: 6.7ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/product/register?Authentication=Bearer+eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8" for ::1 at 2025-06-15 23:06:43 -0300
+Processing by ProductsController#create as HTML
+  Parameters: {"Authentication" => "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/product/register" for ::1 at 2025-06-15 23:07:10 -0300
+Processing by ProductsController#create as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/product/register" for ::1 at 2025-06-16 10:12:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by ProductsController#create as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='Backend',controller='products'*/[0m
+  ↳ app/controllers/application_controller.rb:11:in 'ApplicationController#authenticate_request'
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 22.7ms (1 query, 0 cached) | GC: 10.4ms)
+
+
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1 /*application='Backend'*/[0m
