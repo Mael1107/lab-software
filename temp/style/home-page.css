@@ -86,10 +86,17 @@ body {
 
 main {
     display: flex;
+    flex-flow: column nowrap;
+}
+
+.amostra {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto;
+    display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: space-between;
+    width: 650px;
 }
 
 article#middle {
@@ -97,6 +104,29 @@ article#middle {
     width: 200px;
     height: 300px;
 }
+
+article#right {
+    background-color: #d6d2ca;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+}
+article#left {
+    background-color: #d6d2ca;
+    width: 200px;
+    height: 200px;
+    order: -1;
+    align-self: center;
+}
+
+article#below{ 
+    background-color: #d6d2ca;
+    height: 300px;
+}
+
+
+
+
 
 
 
