@@ -66,7 +66,7 @@ header nav a:hover {
     width: 300px;
     height: 25px;
     padding: 5px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 input#ibusca {
@@ -84,10 +84,12 @@ input#ibusca {
 }
 
 #caixa-busca span:hover {
-    background-color: #d9d9d978;
-    border-radius: 50%;
+    background-color: #d9d9d982;
+    border-radius: 10% 45% 45% 10%;
     padding: 4px;
     transition: .4s;
+    height: 100%;
+    width: 88%;
 }
 
 body {
