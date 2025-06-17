@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   post "admins/user/update", to: "admins#update" 
   post "admins/user/delete", to: "admins#destroy"
+  post "admins/product/register", to: "products#create"
+  post "admins/product/update", to: "products#update"
+  post "admins/product/delete", to: "products#destroy"
 
   post "product/register", to: "products#create"
 end

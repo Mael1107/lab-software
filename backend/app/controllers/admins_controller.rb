@@ -2,7 +2,7 @@ class AdminsController < UsersController && ApplicationController
   before_action :verify_superuser_request
 
   def update
-    user = User.find_by(id: user_params[:id])
+    user = User.find(user_params[:id])
     if user.update(user_params)
       render json: { message: "User updated"}
     end
@@ -15,4 +15,9 @@ class AdminsController < UsersController && ApplicationController
     end
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:id, :name, :email, :password, :cpf, :number, :is_super)
+  end
 end

@@ -15,10 +15,13 @@ class ApplicationController < ActionController::API
   end
 
   def verify_superuser_request
-    if authenticate_request && @current_user.is_super
-      return true
-    else
+    authenticate_request
+    unless @current_user&.is_super
+      render json: { error: "Acesso negado. Você não tem privilégios de superusuário." }, 
+             status: :forbidden
       return false
     end
+    true
   end
+
 end
