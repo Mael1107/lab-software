@@ -41,21 +41,26 @@ header nav span{
     cursor: pointer;
 }
 
+header nav span:hover {
+    color: #a9a9a9cb;
+}
+
 header nav a {
     margin: 20px 20px 20px 10px;
     color: white;
     text-decoration: none;
     font-size: 0.9em;
+    padding: 5px 0px;
 }
 
 header nav a:hover {
-    transform: translate(-2px, -2px);
     color: #a9a9a9cb;
     font-size: 0.9em;
 }
 
 #cart span:hover {
     color: #D9D9D9;
+    transform: translate(-2px, -2px);
 }
 
 #caixa-busca {
@@ -85,8 +90,8 @@ input#ibusca {
 }
 
 #caixa-busca span:hover {
-    color: rgb(182, 182, 182);
-    background-color: #d9d9d9cb;
+    color: rgb(218, 218, 218);
+    background-color: #d9d9d9ca;
     border-radius: 10% 45% 45% 10%;
     padding: 4px;
     transition: .4s;
@@ -139,26 +144,61 @@ article#below{
 }
 
 footer {
+    padding: 30px 0px;
+    display: flex;
+    flex-flow: column nowrap;
     background-color: black;
     color: white;
 }
 
-section.up-footer {
+.info-footer {
+    text-transform: uppercase;
+}
+.info-footer ul {
+    list-style: none;
+}
+
+.info-footer ul li {
+    margin-top: 5px;
+}
+
+.info-footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.info-footer a:hover {
+    text-decoration: underline;
+}
+
+.line-up-footer {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
-section.up-footer p {
-    align-self: flex-end;
+.line-below-footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-section.over-footer {
+.info-footer img {
+    width: 20px;
+}
+
+.links-contact {
     display: flex;
     flex-flow: column nowrap;
-
+    font-size: 0.9em;
 }
 
-
+.links-contact a {
+    margin-top: 5px;
+}
 
 
 
