@@ -27,7 +27,7 @@ header {
 
 #logo span {
     font-size: 40px;
-    color: white;
+    color:  #D9D9D9;
 }
 
 header nav {
@@ -50,7 +50,7 @@ header nav a {
 
 header nav a:hover {
     transform: translate(-2px, -2px);
-    color: #D9D9D9;
+    color: #a9a9a9cb;
     font-size: 0.9em;
 }
 
@@ -79,12 +79,14 @@ input#ibusca {
 }
 
 #caixa-busca span {
+    color: black;
     font-size: 25px;
     padding: 5px;
 }
 
 #caixa-busca span:hover {
-    background-color: #d9d9d982;
+    color: rgb(182, 182, 182);
+    background-color: #d9d9d9cb;
     border-radius: 10% 45% 45% 10%;
     padding: 4px;
     transition: .4s;
@@ -138,8 +140,24 @@ article#below{
 
 footer {
     background-color: black;
-    height: 25vh;
+    color: white;
 }
+
+section.up-footer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+section.up-footer p {
+    align-self: flex-end;
+}
+
+section.over-footer {
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
 
 
 
