@@ -149,7 +149,7 @@ section.catalogo {
 section.extend{
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     background-color: #d6d2ca;
 }
@@ -160,7 +160,7 @@ section.extend{
 
 article.product-container {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
