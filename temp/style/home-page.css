@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 header {
@@ -139,16 +140,35 @@ article#left {
 }
 
 section.catalogo {
+    margin-top: 30px;
+    margin-bottom: 50px;
     display: flex;
     flex-flow: column nowrap;
 }
 
 section.extend{
     display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #d6d2ca;
-    height: 200px;
+}
+
+.imagem-product-container {
+    width: 280px;
+}
+
+article.product-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-catalogo {
+    background-color: white;
+    height: 50px;
+    width: 100%;
 }
 
 
