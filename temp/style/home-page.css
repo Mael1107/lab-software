@@ -19,7 +19,7 @@ header {
 .left {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-left: 30px;
     width: 350px;
@@ -69,16 +69,15 @@ header nav a:hover {
     align-items: center;
     background-color: white;
     border-radius: 30px;
-    width: 300px;
+    width: 260px;
     height: 25px;
     padding: 5px;
-    margin-left: 15px;
 }
 
 input#ibusca {
     background: none;
     border: none;
-    width: 340px;
+    width: 300px;
     height: 34px;
     border-radius: 30px;
     outline: none;
@@ -91,14 +90,9 @@ input#ibusca {
 }
 
 #caixa-busca span:hover {
-    color: rgb(218, 218, 218);
-    background-color: #d9d9d9ca;
-    border-radius: 10% 45% 45% 10%;
-    padding: 4px;
-    transition: .4s;
-    height: 100%;
-    width: 88%;
+    color: #a9a9a9cb;
 }
+
 
 body {
     background-color: #D9D9D9;
@@ -149,7 +143,6 @@ section.catalogo {
 section.extend{
     display: flex;
     flex-flow: row wrap;
-    align-content: flex-start; 
     justify-content: space-between; 
     background-color: #d6d2ca;
 }
@@ -161,18 +154,16 @@ section.extend{
 article.product-container {
     position: relative;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-items: center;
-
 }
 
 .footer-catalogo {
     position: absolute;
-    top: 90%;
+    top: 88%;
     left: 0%;
     background-color: rgba(255, 255, 255, 0.61);
-    height: 30px;
+    height: 35px;
     width: 100%;
 }
 
