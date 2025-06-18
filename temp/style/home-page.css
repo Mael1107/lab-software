@@ -159,6 +159,7 @@ section.extend{
 }
 
 article.product-container {
+    position: relative;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -166,7 +167,10 @@ article.product-container {
 }
 
 .footer-catalogo {
-    background-color: white;
+    position: absolute;
+    top: 80%;
+    left: 2%;
+    background-color: rgba(255, 255, 255, 0.526);
     height: 50px;
     width: 100%;
 }
