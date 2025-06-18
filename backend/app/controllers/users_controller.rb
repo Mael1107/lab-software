@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   skip_before_action :authenticate_request, only: [ :login, :create ]
 
   def create
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
 
     if user && user.authenticate(user_params[:password])
       token = JWT.encode({ user_id: user.id }, 'devScratch', "HS256")
-      render json: { token: token }
+      render json: { token: token, user: user.name }
     else
       render json: { message: "Invalid login"}, status: :unauthorized
     end 

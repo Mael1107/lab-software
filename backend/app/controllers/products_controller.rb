@@ -1,5 +1,10 @@
 class ProductsController < ApplicationController
-  before_action :verify_superuser_request
+  skip_before_action :authenticate_request, only: [ :index ]
+  before_action :verify_superuser_request, except: [ :index ]
+
+  def index
+    render json: { products: Product.all }
+  end
 
   def create
     if Product.create!(product_params)

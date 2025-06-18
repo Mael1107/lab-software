@@ -1,6 +1,10 @@
 class AdminsController < UsersController && ApplicationController
   before_action :verify_superuser_request
 
+  def user_index
+    render json: { users: User.all }
+  end
+
   def update
     user = User.find(user_params[:id])
     if user.update(user_params)
