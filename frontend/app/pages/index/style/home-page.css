@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #d9d9d9;
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.amostra {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 1000px;
+  gap: 10px;
+}
+
+article#middle {
+  background-color: #d6d2ca;
+  padding: 10px;
+  width: 400px;
+  height: 400px;
+}
+
+article#right {
+  background-color: #d6d2ca;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+article#left {
+  background-color: #d6d2ca;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  order: -1;
+  align-self: center;
+}
+
+section.catalogo {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+section.extend {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #d6d2ca;
+}
+
+.imagem-product-container {
+  width: 280px;
+}
+
+article.product-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  flex: auto;
+}
+
+.footer-catalogo {
+  position: absolute;
+  top: 88%;
+  left: 0%;
+  background-color: rgba(255, 255, 255, 0.61);
+  height: 35px;
+  width: 100%;
+  color: black;
+  padding: 5px;
+}
