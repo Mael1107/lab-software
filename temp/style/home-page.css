@@ -76,9 +76,7 @@ article.product-container {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 86%;
-    left: 0%;
+
     background-color: rgba(255, 255, 255, 0.61);
     height: 40px;
     width: 100%;
