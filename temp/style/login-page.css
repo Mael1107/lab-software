@@ -3,19 +3,71 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body, html {
     background-color: black;
     color: white;
+    height: 100%;
 }
 
 header {
-    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 6vh;
 }
 
-#home {
+#logo {
+    font-size: 1.2em;
     color: white;
-    display: block;
-    text-align: center;
+    margin-top: 10px;
+}
+
+
+article.essential {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article.essential h1 {
+    font-size: 5em;
+}
+
+div.form {
+    width: 400px;
+}
+
+div.form form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+div.form form input {
+    padding: 10px;
+}
+
+input.special-input {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input.normal-input {
+    width: 80%;
 }
