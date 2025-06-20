@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    background-color: black;
+    height: 100%;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+}
+
+#logo {
+    color: white;
+    margin-top: 10px;
+    margin-top: 50px;
+}
+
+#logo img {
+    width: 80px;
+}
+
+article.essential {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+article.essential h1 {
+    font-size: 3em;
+}
+
+
+div.form form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
