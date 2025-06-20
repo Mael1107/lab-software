@@ -1,13 +1,21 @@
 @charset "UTF-8";
 
+/* Fontes da Web */
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+
+root {
+    --fonte-padrao:
+}
 * {
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
-body {
+body, html {
     background-color: #D9D9D9;
+    font-family: "Abyssinica SIL", serif;
 }
 
 main {
