@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+/* Fontes da Web */
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+:root {
+    --fonte-padrao: "Abyssinica SIL", serif;
+    --fonte-especial:"Aboreto", system-ui;
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -29,7 +38,7 @@ header {
 }
 
 #logo img {
-    width: 80px;
+    width: 70px;
 }
 
 
@@ -77,13 +86,18 @@ div.form form a {
 }
 
 .special-input:focus {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(74, 74, 74, 0.342);
 }
 
 .normal-input {
     width: 80%;
     font-size: 1.4em;
     cursor: pointer;
+}
+
+.normal-input:hover {
+    background-color: rgb(234, 232, 232);
+    color: rgb(67, 67, 67);
 }
 
 div.form p {

@@ -5,8 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 
-root {
-    --fonte-padrao:
+:root {
+    --fonte-padrao: "Abyssinica SIL", serif;
+    --fonte-especial:"Aboreto", system-ui;
 }
 * {
     padding: 0px;
@@ -15,7 +16,7 @@ root {
 }
 body, html {
     background-color: #D9D9D9;
-    font-family: "Abyssinica SIL", serif;
+    font-family: var(--fonte-padrao);
 }
 
 main {
