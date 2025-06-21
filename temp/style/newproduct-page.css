@@ -61,48 +61,22 @@ div.user a:hover {
 }
 
 article.essential {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    width: 600px;
-    gap: 20px;
-}
-
-div.block {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: #D8D8D8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.479);
 }
 
-div.block p, span {
+section.interface-add {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#logo1 {
+    width: 50px;
     color: black;
-    font-size: 1.1em;
 }
 
-div.block p {
-    margin-left: 20px;
+.image-block {
+    background-color: rgb(96, 96, 96);
+    padding: 10px;
 }
 
-div.block span {
-    font-size: 1.7em
-}
-
-div.block a {
-    text-decoration: none;
-}
-
-div.block:hover {
-    background-color: rgba(128, 128, 128, 0.499);
-    cursor: pointer;
-    transform: translate(-2px, -2px);
-}
