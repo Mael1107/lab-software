@@ -27,11 +27,38 @@
 
             <section class="image-block">
 
-                <img id="logo1" src="imagens/o-email.png" alt="imagem-produto">
+                <div class="container-image">
+                    <img id="logo1" src="imagens/o-email.png" alt="imagem-produto">
+                </div>
                 
             </section>
 
-            <section class="interface-add"></section>
+            <section class="interface-add">
+
+                <h4>NOVO PRODUTO</h4>
+                <form action="" method="get" autocomplete="on">
+
+                    <label for="iname">Nome</label>
+                    <input class="special-input" type="text" name="Nome" id="iname" autocomplete="name">
+                    <label for="ipreco">Preço</label>
+                    <input class="special-input" type="number" name="Preço" id="ipreco" >
+                    <label for="itam">Tamanho</label>
+                    <input type="checkbox" name="Tamanho" id="itam">
+                    <label for="idesc">Descrição</label>
+                    <textarea name="device-width" id="idesc"></textarea>
+                    
+                    <div class="buttons">
+
+                        <div class="fakebutton">
+                            <p>CANCELAR</p>
+                        </div>
+
+                        <input id="submit-button" type="submit" value="CONFIRMAR">
+
+                    </div>
+                </form>
+
+            </section>
 
         </article>
 
