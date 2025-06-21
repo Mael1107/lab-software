@@ -87,3 +87,12 @@ div.block p {
 div.block span {
     font-size: 1.7em
 }
+
+div.block a {
+    text-decoration: none;
+}
+
+div.block:hover {
+    background-color: rgba(128, 128, 128, 0.499);
+    cursor: pointer;
+}
