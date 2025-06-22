@@ -1,6 +1,10 @@
 import "../style/login-page.css";
 
-export default function Login() {
+function Logging () {
+
+}
+
+function Login() {
   return (
     <body>
       <main>
@@ -11,7 +15,7 @@ export default function Login() {
         <article className="essential">
           <h1>Entrar</h1>
           <div className="form">
-            <form action="" method="post" autoComplete="on">
+            <form autoComplete="on">
               <input
                 className="special-input"
                 type="email"
@@ -41,3 +45,5 @@ export default function Login() {
     </body>
   );
 }
+
+export {Login, Logging}

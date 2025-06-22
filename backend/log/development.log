@@ -25387,3 +25387,31 @@ Processing by ProductsController#index as */*
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
 
 
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='Backend'*/[0m
+Started POST "/user/login" for 127.0.0.1 at 2025-06-22 19:27:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Backend'*/[0m
+Processing by UsersController#login as HTML
+  Parameters: {"email" => "[FILTERED]", "senha" => "1969"}
+Completed 400 Bad Request in 15ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:39:in 'UsersController#user_params'
+app/controllers/users_controller.rb:14:in 'UsersController#login'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-06-22 19:27:19 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/user/login" for 127.0.0.1 at 2025-06-22 19:28:04 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"email" => "[FILTERED]", "senha" => "1969"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: user):
+  
+app/controllers/users_controller.rb:39:in 'UsersController#user_params'
+app/controllers/users_controller.rb:14:in 'UsersController#login'
