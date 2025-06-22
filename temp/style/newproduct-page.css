@@ -86,7 +86,7 @@ section.interface-add form input {
     margin-bottom: 20px;
 }
 
-section.interface-add form input:focus {
+.special-input:focus {
     transform: translate(-3px, 0px);
     padding: 10px;
     background-color: rgba(184, 184, 184, 0.562);
@@ -100,7 +100,7 @@ section.interface-add h4 {
     font-size: 1.2em;
 }
 
-#logo1 {
+#logo-product {
     width: 50px;
     color: black;
 }
@@ -121,6 +121,23 @@ section.interface-add h4 {
 
 form label {
     color: black;
+}
+
+.radio-container {
+    margin-top: 10px;
+}
+
+.radio-container input {
+    margin-right: 5px;
+}
+
+.radio-container input:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.radio-item {
+    margin-right: 5px;
 }
 
 
@@ -160,3 +177,5 @@ div.fakebutton:hover {
     color: black;
     padding: 10px;
 }
+
+

@@ -28,7 +28,7 @@
             <section class="image-block">
 
                 <div class="container-image">
-                    <img id="logo1" src="imagens/o-email.png" alt="imagem-produto">
+                    <img id="logo-product" src="imagens/o-email.png" alt="imagem-produto">
                 </div>
                 
             </section>
@@ -43,7 +43,15 @@
                     <label for="ipreco">Preço</label>
                     <input class="special-input" type="number" name="Preço" id="ipreco" >
                     <label for="itam">Tamanho</label>
-                    <input type="checkbox" name="Tamanho" id="itam">
+
+
+                    <div class="radio-container">
+                        <input type="radio" name="tamanho" id="ip"><label class="radio-item" for="ip">P</label>
+                        <input type="radio" name="tamanho" id="im"><label class="radio-item" for="im">M</label>
+                        <input type="radio" name="tamanho" id="ig"><label class="radio-item" for="ig">G</label>
+                        <input type="radio" name="tamanho" id="igg"><label class="radio-item" for="igg">GG</label>
+                    </div>
+
                     <label for="idesc">Descrição</label>
                     <textarea name="device-width" id="idesc"></textarea>
                     
