@@ -1,15 +1,15 @@
-import "../style/newproduct-page.css";
+import "./styles/editproduct-page.css";
 
-export default function New_Product() {
+export default function Update_Product() {
   return (
     <main>
       <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       ></link>
-      <article className="essential">
-        <section className="image-block">
-          <div className="container-image">
+      <article class="essential">
+        <section class="image-block">
+          <div class="container-image">
             <img
               id="logo-product"
               src="imagens/o-email.png"
@@ -18,50 +18,50 @@ export default function New_Product() {
           </div>
         </section>
 
-        <section className="interface-add">
-          <h4>NOVO PRODUTO</h4>
-          <form action="" method="get" autocomplete="on">
-            <label for="iname">Nome</label>
+        <section class="interface-add">
+          <h4>EDITAR PRODUTO</h4>
+          <form action="" method="get" autoComplete="on">
+            <label htmlFor="iname">Nome</label>
             <input
-              className="special-input"
+              class="special-input"
               type="text"
               name="Nome"
               id="iname"
-              autocomplete="name"
+              autoComplete="name"
             />
-            <label for="ipreco">Preço</label>
+            <label htmlFor="ipreco">Preço</label>
             <input
-              className="special-input"
+              class="special-input"
               type="number"
               name="Preço"
               id="ipreco"
             />
-            <label for="itam">Tamanho</label>
+            <label htmlFor="itam">Tamanho</label>
 
-            <div className="radio-container">
+            <div class="radio-container">
               <input type="radio" name="tamanho" id="ip" />
-              <label className="radio-item" for="ip">
+              <label class="radio-item" htmlFor="ip">
                 P
               </label>
               <input type="radio" name="tamanho" id="im" />
-              <label className="radio-item" for="im">
+              <label class="radio-item" htmlFor="im">
                 M
               </label>
               <input type="radio" name="tamanho" id="ig" />
-              <label className="radio-item" for="ig">
+              <label class="radio-item" htmlFor="ig">
                 G
               </label>
               <input type="radio" name="tamanho" id="igg" />
-              <label className="radio-item" for="igg">
+              <label class="radio-item" htmlFor="igg">
                 GG
               </label>
             </div>
 
-            <label for="idesc">Descrição</label>
+            <label htmlFor="idesc">Descrição</label>
             <textarea name="device-width" id="idesc"></textarea>
 
-            <div className="buttons">
-              <button type="button" className="fakebutton">
+            <div class="buttons">
+              <button type="button" class="fakebutton">
                 CANCELAR
               </button>
 

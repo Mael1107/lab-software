@@ -1,6 +1,6 @@
-import "../style/editproduct-page.css";
+import "./styles/newproduct-page.css";
 
-export default function Edit_Product() {
+export default function Register_Product() {
   return (
     <main>
       <link
@@ -19,45 +19,45 @@ export default function Edit_Product() {
         </section>
 
         <section className="interface-add">
-          <h4>EDITAR PRODUTO</h4>
-          <form action="" method="get" autocomplete="on">
-            <label for="iname">Nome</label>
+          <h4>NOVO PRODUTO</h4>
+          <form action="" method="get" autoComplete="on">
+            <label htmlFor="iname">Nome</label>
             <input
               className="special-input"
               type="text"
               name="Nome"
               id="iname"
-              autocomplete="name"
+              autoComplete="name"
             />
-            <label for="ipreco">Preço</label>
+            <label htmlFor="ipreco">Preço</label>
             <input
               className="special-input"
               type="number"
               name="Preço"
               id="ipreco"
             />
-            <label for="itam">Tamanho</label>
+            <label>Tamanho</label>
 
             <div className="radio-container">
               <input type="radio" name="tamanho" id="ip" />
-              <label className="radio-item" for="ip">
+              <label className="radio-item" htmlFor="ip">
                 P
               </label>
               <input type="radio" name="tamanho" id="im" />
-              <label className="radio-item" for="im">
+              <label className="radio-item" htmlFor="im">
                 M
               </label>
               <input type="radio" name="tamanho" id="ig" />
-              <label className="radio-item" for="ig">
+              <label className="radio-item" htmlFor="ig">
                 G
               </label>
               <input type="radio" name="tamanho" id="igg" />
-              <label className="radio-item" for="igg">
+              <label className="radio-item" htmlFor="igg">
                 GG
               </label>
             </div>
 
-            <label for="idesc">Descrição</label>
+            <label htmlFor="idesc">Descrição</label>
             <textarea name="device-width" id="idesc"></textarea>
 
             <div className="buttons">

@@ -1,4 +1,4 @@
-import "../style/login-page.css"
+import "../style/login-page.css";
 
 export default function Login() {
   return (
@@ -11,14 +11,14 @@ export default function Login() {
         <article className="essential">
           <h1>Entrar</h1>
           <div className="form">
-            <form action="" method="post" autocomplete="on">
+            <form action="" method="post" autoComplete="on">
               <input
                 className="special-input"
                 type="email"
                 name="email"
                 id="iemail"
                 placeholder="Seu E-mail"
-                autocomplete="email"
+                autoComplete="email"
               />
               <input
                 className="special-input"

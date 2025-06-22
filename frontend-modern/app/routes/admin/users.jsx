@@ -1,11 +1,11 @@
-import Admin_Header from "../../pages/admins/admin-header";
-import Show_Users from "../../pages/admins/users/users";
+import Admin_Header from "../../pages/admin/admin_header";
+import Users_Show from "../../pages/admin/users";
 
-export default function users() {
+export default function ShowUsers() {
   return (
-    <body>
+    <section className="bg-amber-50 min-h-screen">
       <Admin_Header />
-      <Show_Users />
-    </body>
+      <Users_Show />
+    </section>
   );
 }

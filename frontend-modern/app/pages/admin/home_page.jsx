@@ -1,6 +1,6 @@
-import "./style/insert-page.css";
+import "./styles/insert-page.css";
 
-export default function Admin_Landing_Page() {
+export default function Admin_Lading_Page() {
   return (
     <main>
       <link
@@ -14,7 +14,7 @@ export default function Admin_Landing_Page() {
       <article className="essential">
         <div className="block">
           <span className="material-symbols-outlined">deployed_code</span>
-          <a href="/admins/registrar/produto" target="_self">
+          <a href="/admins/produtos/registrar" target="_self">
             <p>Novo Produto</p>
           </a>
         </div>
@@ -28,7 +28,7 @@ export default function Admin_Landing_Page() {
 
         <div className="block">
           <span className="material-symbols-outlined">person</span>
-          <a href="/admins/registrar/usuario" target="_self">
+          <a href="/admins/usuarios/registrar" target="_self">
             <p>Novo Usuário</p>
           </a>
         </div>

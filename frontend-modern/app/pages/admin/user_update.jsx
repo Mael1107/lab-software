@@ -1,68 +1,63 @@
-import "../style/useredit-page.css";
+import "./styles/useredit-page.css";
 
-export default function Edit_User() {
+export default function Update_Product() {
   return (
     <main>
       <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       ></link>
-      <article className="essential">
+      <article class="essential">
         <h4>Editar Usuário</h4>
-        <form action="" method="post" autocomplete="on">
-          <label for="iname">Nome</label>
+        <form action="" method="post" autoComplete="on">
+          <label htmlFor="iname">Nome</label>
           <input
-            className="special-input"
+            class="special-input"
             type="text"
             name="Nome"
             id="iname"
-            autocomplete="name"
+            autoComplete="name"
           />
-          <label for="iemail">E-mail</label>
+          <label htmlFor="iemail">E-mail</label>
           <input
-            className="special-input"
+            class="special-input"
             type="email"
             name="email"
             id="iemail"
-            autocomplete="email"
+            autoComplete="email"
           />
-          <label for="isen">Senha</label>
+          <label htmlFor="isen">Senha</label>
+          <input class="special-input" type="password" name="Senha" id="isen" />
+          <label htmlFor="icpf">CPF</label>
           <input
-            className="special-input"
-            type="password"
-            name="Senha"
-            id="isen"
-          />
-          <label for="icpf">CPF</label>
-          <input
-            className="special-input"
+            class="special-input"
             type="text"
             name="CPF"
             id="icpf"
             maxlength="14"
             placeholder="000.000.000-00"
           />
-          <label for="itel">Telefone</label>
+          <label htmlFor="itel">Telefone</label>
           <input
-            className="special-input"
+            class="special-input"
             type="tel"
             name="Telefone"
             id="itel"
-            autocomplete="tel"
+            autoComplete="tel"
             maxlength="15"
             placeholder="(00) 00000-0000"
           />
-          <label for="icargo">Cargo</label>
+          <label htmlFor="icargo">Cargo</label>
 
-          <div className="choose">
+          <div class="choose">
             <input type="radio" name="Cargo" id="cliente" />
-            <label for="cliente">Cliente</label>
+            <label htmlFor="cliente">Cliente</label>
             <input type="radio" name="Cargo" id="adm" />
-            <label for="adm">Administrador</label>
+            <label htmlFor="adm">Administrador</label>
           </div>
 
-          <div className="buttons">
-            <buttons type="button" className="fakebutton">
+          <div class="buttons">
+            <buttons type="button" class="fakebutton">
               CANCELAR
             </buttons>
 

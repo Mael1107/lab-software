@@ -10,39 +10,39 @@ export default function Register() {
           <h1>Criar uma Conta</h1>
           <p>Compre mais rápido e acompanhe seu pedido em tempo real!</p>
           <div className="form">
-            <form action="" method="post" autocomplete="on">
-              <label for="iuser">Nome Completo</label>
+            <form action="" method="post" autoComplete="on">
+              <label htmlFor="iuser">Nome Completo</label>
               <input
                 className="input-special"
                 type="text"
                 name="texto"
                 id="iuser"
-                autocomplete="name"
+                autoComplete="name"
               />
-              <label for="iemail">E-mail</label>
+              <label htmlFor="iemail">E-mail</label>
               <input
                 className="input-special"
                 type="email"
                 name="email"
                 id="iemail"
-                autocomplete="email"
+                autoComplete="email"
               />
-              <label for="itel">Telefone(Opcional)</label>
+              <label htmlFor="itel">Telefone(Opcional)</label>
               <input
                 className="input-special"
                 type="tel"
                 name="telefone"
                 id="itel"
-                autocomplete="tel"
+                autoComplete="tel"
               />
-              <label for="isen0">Senha</label>
+              <label htmlFor="isen0">Senha</label>
               <input
                 className="input-special"
                 type="password"
                 name="Senha"
                 id="isen0"
               />
-              <label for="isen1">Confirmar Senha</label>
+              <label htmlFor="isen1">Confirmar Senha</label>
               <input
                 className="input-special"
                 type="password"

@@ -1,16 +1,9 @@
-import "./style/insert-page.css";
+import "./styles/insert-page.css";
 
 export default function Admin_Header() {
   return (
     <header>
-      <link
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
       <section className="left">
         <a id="logo" href="/admins/home" target="_self">
           <img src="../../imagens/logo.png" alt="logo" />
