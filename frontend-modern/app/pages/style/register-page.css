@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* Fontes da Web */
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+:root {
+  --fonte-padrao: "Abyssinica SIL", serif;
+  --fonte-especial: "Aboreto", system-ui;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--fonte-padrao);
+}
+
+body,
+html {
+  background-color: black;
+  height: 100%;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+}
+
+#logo {
+  color: white;
+  margin-top: 10px;
+  margin-top: 50px;
+}
+
+#logo img {
+  width: 70px;
+}
+
+article.essential {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+article.essential h1 {
+  font-size: 4.5em;
+}
+
+article.essential p {
+  margin: 5px 0px;
+}
+
+div.form {
+  width: 550px;
+  margin-top: 10px;
+}
+
+div.form form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.input-special {
+  background: none;
+  outline: none;
+  border: 1px solid white;
+  padding: 5px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.input-special:focus {
+  background-color: rgba(74, 74, 74, 0.342);
+}
+
+.input-submit {
+  margin-top: 15px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.input-submit:hover {
+  background-color: rgb(234, 232, 232);
+  color: rgb(67, 67, 67);
+}
+
+form a {
+  color: white;
+}

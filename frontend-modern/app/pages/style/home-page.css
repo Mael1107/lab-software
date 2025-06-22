@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* Fontes da Web */
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+:root {
+  --fonte-padrao: "Abyssinica SIL", serif;
+  --fonte-especial: "Aboreto", system-ui;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  background-color: #d9d9d9;
+  font-family: var(--fonte-padrao);
+}
+
+main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.amostra {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 650px;
+}
+
+article#middle {
+  background-color: #d6d2ca;
+  width: 200px;
+  height: 300px;
+}
+
+article#right {
+  background-color: #d6d2ca;
+  width: 200px;
+  height: 200px;
+  align-self: center;
+}
+article#left {
+  background-color: #d6d2ca;
+  width: 200px;
+  height: 200px;
+  order: -1;
+  align-self: center;
+}
+
+section.catalogo {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+section.extend {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #d6d2ca;
+}
+
+.imagem-product-container {
+  width: 280px;
+}
+
+article.product-container {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+}
+
+.footer-catalogo {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 86%;
+  left: 0%;
+  background-color: rgba(255, 255, 255, 0.61);
+  height: 40px;
+  width: 100%;
+}
+
+.footer-catalogo p {
+  text-transform: uppercase;
+}

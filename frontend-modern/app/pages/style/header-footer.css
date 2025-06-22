@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* Header */
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 8vh;
+}
+
+.left {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 30px;
+  width: 350px;
+}
+
+#logo img {
+  width: 55px;
+  color: #d9d9d9;
+}
+
+header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+header nav span {
+  color: white;
+  cursor: pointer;
+}
+
+header nav span:hover {
+  color: #a9a9a9cb;
+}
+
+header nav a {
+  margin: 20px 20px 20px 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 5px 0px;
+}
+
+header nav a:hover {
+  color: #a9a9a9cb;
+  font-size: 0.9em;
+}
+
+#cart span:hover {
+  color: #d9d9d9;
+  transform: translate(-2px, -2px);
+}
+
+#caixa-busca {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  width: 260px;
+  height: 25px;
+  padding: 5px;
+}
+
+input#ibusca {
+  background: none;
+  border: none;
+  width: 300px;
+  height: 34px;
+  border-radius: 30px;
+  outline: none;
+}
+
+#caixa-busca span {
+  color: black;
+  font-size: 25px;
+  padding: 5px;
+}
+
+#caixa-busca span:hover {
+  color: #a9a9a9cb;
+}
+
+/* Footer */
+
+footer {
+  padding: 30px 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: black;
+  color: white;
+}
+
+.info-footer {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.info-footer ul {
+  list-style: none;
+}
+
+.info-footer ul li {
+  margin-top: 5px;
+}
+
+.info-footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.info-footer input {
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+#iemail {
+  border-radius: 5px;
+  width: 250px;
+}
+
+#input-submit {
+  margin-left: -20px;
+  width: 100px;
+  background-color: #d9d9d9;
+}
+
+#input-submit:hover {
+  cursor: pointer;
+}
+
+.info-footer a:hover {
+  text-decoration: underline;
+}
+
+.line-up-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.line-below-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info-footer img {
+  width: 20px;
+}
+
+.links-contact {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+.links-contact a {
+  margin-top: 5px;
+}
+
+.center-ico-text {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 5px;
+}
