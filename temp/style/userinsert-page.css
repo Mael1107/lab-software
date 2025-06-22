@@ -61,29 +61,35 @@ div.user a:hover {
 }
 
 article.essential {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 350px;
 }
 
-section.interface-add {
+article.essential h4 {
+    color: black;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+article.essential form {
     display: flex;
     flex-flow: column nowrap;
 }
 
-section.interface-add form {
-    display: flex;
-    flex-flow: column nowrap;
+form label {
+    color: black;
+    font-size: 1.1em;
 }
 
-section.interface-add form input {
-    margin-bottom: 20px;
+.special-input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    color: black;
+    margin-bottom: 10px;
 }
 
 .special-input:focus {
@@ -92,66 +98,6 @@ section.interface-add form input {
     background-color: rgba(184, 184, 184, 0.562);
     transition: 0.4s;
     border-radius: 5px;
-}
-
-section.interface-add h4 {
-    color: black;
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-
-#logo-product {
-    width: 50px;
-    color: black;
-}
-
-.image-block {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.379);
-
-}
-
-.container-image {
-    background-color: rgb(110, 110, 110);
-    padding: 50px;
-}
-
-form label {
-    color: black;
-}
-
-.radio-container {
-    margin-top: 10px;
-}
-
-.radio-container input {
-    margin-right: 5px;
-}
-
-.radio-container input:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-}
-
-.radio-item {
-    margin-right: 5px;
-}
-
-
-.special-input {
-    border: none;
-    background: none;
-    outline: none;
-    border-bottom: 1px solid black;
-    color: black;
-}
-
-textarea {
-    margin-top: 5px;
-    color: black;
 }
 
 .buttons {
@@ -167,8 +113,6 @@ textarea {
     padding: 10px;
     height: 40px;
     border-radius: 5px;
-    outline: none;
-    border: none;
 }
 
 .fakebutton:hover {
@@ -182,4 +126,31 @@ textarea {
     cursor: pointer;
 }
 
+.choose {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 7px;
+    
+}
 
+input[type="radio"] {
+    display: none;
+}
+
+.choose label {
+    padding: 5px;
+    background-color: rgba(118, 118, 118, 0.468);
+    border: 1px solid black;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #525252;
+    color: #fff;
+}
+
+.choose label:hover {
+    background-color: rgba(177, 177, 177, 0.468);
+    cursor: pointer;
+}

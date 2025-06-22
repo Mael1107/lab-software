@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Insert Page</title>
+    <link rel="stylesheet" href="style/userinsert-page.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+
+        <section class="left">
+            <a id="logo" href="insert-page.html" target="_self"><img src="imagens/logo.png" alt="logo"></a>
+            <div class="user">
+                <a href="#" target="_self"><span id="account" class="material-icons">account_circle</span></a>
+                <a href="#" target="_self"><small>Bem-Vindo de volta,</small><br> ADMIN</a>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+        
+        <article class="essential">
+
+            <h4>Usuário</h4>
+            <form action="" method="post" autocomplete="on">
+
+                <label for="iname">Nome</label>
+                <input class="special-input" type="text" name="Nome" id="iname" autocomplete="name">
+                <label for="iemail">E-mail</label>
+                <input class="special-input" type="email" name="email" id="iemail" autocomplete="email">
+                <label for="isen">Senha</label>
+                <input class="special-input" type="password" name="Senha" id="isen">
+                <label for="icpf">CPF</label>
+                <input class="special-input" type="text" name="CPF" id="icpf" maxlength="14" placeholder="000.000.000-00">
+                <label for="itel">Telefone</label>
+                <input class="special-input" type="tel" name="Telefone" id="itel" autocomplete="tel" maxlength="15" placeholder="(00) 00000-0000">
+                <label for="icargo">Cargo</label>
+
+                <div class="choose">
+                    <input type="radio" name="Cargo" id="cliente"><label for="cliente">Cliente</label>
+                    <input type="radio" name="Cargo" id="adm"><label for="adm">Administrador</label>
+                </div>
+
+                <div class="buttons">
+
+                        <buttons type="button" class="fakebutton">CANCELAR</buttons>
+
+                        <input id="submit-button" type="submit" value="CONFIRMAR">
+
+                </div>
+
+            </form>
+
+        </article>
+
+    </main>
+
+    <script>
+        const cpfInput = document.getElementById('icpf');
+        cpfInput.addEventListener('input', function() {
+        let value = this.value.replace(/\D/g, '');
+        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+        value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        this.value = value; 
+  });
+
+
+        const telInput = document.getElementById('itel');
+        telInput.addEventListener('input', function() {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length <= 10) {
+            value = value.replace(/(\d{2})(\d)/, '($1) $2');
+            value = value.replace(/(\d{4})(\d)/, '$1-$2');
+            } else {
+            value = value.replace(/(\d{2})(\d)/, '($1) $2');
+            value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            }
+            this.value = value;
+});
+</script>
+    </script>
+    
+</body>
+</html>
