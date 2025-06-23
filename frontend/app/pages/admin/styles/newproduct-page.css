@@ -175,7 +175,15 @@ textarea {
 }
 
 #submit-button {
-  color: black;
+  background-color: rgb(15, 104, 15);
   padding: 10px;
-  cursor: pointer;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+#submit-button:hover {
+  background-color: rgb(12, 68, 12);
+  cursor:pointer
 }
