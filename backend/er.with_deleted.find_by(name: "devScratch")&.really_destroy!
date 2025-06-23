@@ -1,0 +1,21 @@
+=> 
+[[32m#<User:0x00007dcf0a76eb00[0m
+  id: [34m[1m10[0m,
+  name: [31m[1m"[0m[31mdevScratch[0m[31m[1m"[0m,
+  password_digest: [31m[1m"[0m[31m[FILTERED][0m[31m[1m"[0m,
+  email: [31m[1m"[0m[31m[FILTERED][0m[31m[1m"[0m,
+  cpf: [31m[1m"[0m[31m141.797.167-39[0m[31m[1m"[0m,
+  number: [31m[1m"[0m[31m[1m"[0m,
+  is_super: [36m[1mfalse[0m,
+  created_at: [31m[1m"[0m[31m2025-06-23 05:06:29.720244000 +0000[0m[31m[1m"[0m,
+  updated_at: [31m[1m"[0m[31m2025-06-23 05:06:29.720244000 +0000[0m[31m[1m"[0m[32m>[0m,
+ [32m#<User:0x00007dcf0a76e9c0[0m
+  id: [34m[1m11[0m,
+  name: [31m[1m"[0m[31mgabriel[0m[31m[1m"[0m,
+  password_digest: [31m[1m"[0m[31m[FILTERED][0m[31m[1m"[0m,
+  email: [31m[1m"[0m[31m[FILTERED][0m[31m[1m"[0m,
+  cpf: [31m[1m"[0m[31m400.289.223-20[0m[31m[1m"[0m,
+  number: [31m[1m"[0m[31m[1m"[0m,
+  is_super: [36m[1mfalse[0m,
+  created_at: [31m[1m"[0m[31m2025-06-23 05:20:02.381545000 +0000[0m[31m[1m"[0m,
+  updated_at: [31m[1m"[0m[31m2025-06-23 05:20:02.381545000 +0000[0m[31m[1m"[0m[32m>[0m]

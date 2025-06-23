@@ -15,12 +15,16 @@ Rails.application.routes.draw do
   put "user/update", to: "users#update"
   delete "user/delete", to: "users#destroy"
 
+  get "admins/user/:name", to: "admins#check_super"
+
   get "admins/user/", to: "admins#user_index"
-  put "admins/user/update", to: "admins#update" 
-  post "admins/user/delete", to: "admins#destroy"
+  get "admins/user/update/:id", to: "admins#getupdate"
+  put "admins/user/update/:id", to: "admins#update"
+  delete "admins/user/delete/:id", to: "admins#destroy"
   post "admins/product/register", to: "products#create"
-  put "admins/product/update", to: "products#update"
-  delete "admins/product/delete", to: "products#destroy"
+  get "admins/product/update/:id", to: "products#getupdate"
+  put "admins/product/update/:id", to: "products#update"
+  delete "admins/product/delete/:id", to: "products#destroy"
 
   post "product/register", to: "products#create"
 end
