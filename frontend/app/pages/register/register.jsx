@@ -53,7 +53,7 @@ export default function Register() {
               <p>
                 Já possui uma conta?{" "}
                 <a href="/login" target="_self">
-                  Entre agora messmo
+                  Entre agora mesmo
                 </a>
               </p>
             </form>

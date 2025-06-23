@@ -82,6 +82,7 @@ article.product-container {
 }
 
 .footer-catalogo {
+  color: black;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;

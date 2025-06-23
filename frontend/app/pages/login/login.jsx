@@ -1,10 +1,6 @@
 import "../style/login-page.css";
 
-function Logging () {
-
-}
-
-function Login() {
+export default function Login() {
   return (
     <body>
       <main>
@@ -45,5 +41,3 @@ function Login() {
     </body>
   );
 }
-
-export {Login, Logging}
