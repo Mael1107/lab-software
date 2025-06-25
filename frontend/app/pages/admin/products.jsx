@@ -9,8 +9,7 @@ export default function Products_Show() {
 
   const navigate = useNavigate();
 
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8";
+  const token = localStorage.getItem("authToken");
 
   const api = axios.create({
     baseURL: "http://127.0.0.1:3000",
@@ -35,7 +34,9 @@ export default function Products_Show() {
   }, []);
 
   const excluirProduto = async (id) => {
-    const confirmar = window.confirm("Tem certeza que deseja excluir este produto?");
+    const confirmar = window.confirm(
+      "Tem certeza que deseja excluir este produto?"
+    );
     if (!confirmar) return;
 
     try {

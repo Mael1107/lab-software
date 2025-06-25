@@ -15,8 +15,7 @@ export default function Register_Product() {
 
   const [successMessage, setSuccessMessage] = useState("");
 
-  const token =
-    "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.Mt3BAMqCSTT4DnjCRJC4e6Mmkz25b_nJssj4rqWMHR8";
+  const token = localStorage.getItem("authToken");
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -163,7 +162,9 @@ export default function Register_Product() {
             </div>
 
             {successMessage && (
-              <p style={{ color: "green", marginTop: "10px" }}>{successMessage}</p>
+              <p style={{ color: "green", marginTop: "10px" }}>
+                {successMessage}
+              </p>
             )}
           </form>
         </section>

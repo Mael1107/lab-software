@@ -101,7 +101,7 @@ section.interface-add h4 {
 }
 
 #logo-product {
-  width: 50px;
+  width: 600px;
   color: black;
 }
 
@@ -115,7 +115,7 @@ section.interface-add h4 {
 
 .container-image {
   background-color: rgb(110, 110, 110);
-  padding: 50px;
+  padding: 0px;
 }
 
 form label {

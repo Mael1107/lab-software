@@ -4,7 +4,7 @@ import "../style/header-footer.css";
 const business_info = {
   whatsapp: "5585992547682",
   instagram: "strike._store",
-  email: "email.muitofoda@gmail.com",
+  email: "email.muitolegal@gmail.com",
 };
 
 function Normal_Header() {
